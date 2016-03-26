@@ -1,23 +1,5 @@
 module CommandHandlers
   module TestCase
-    class FakeEventStore
-      def initialize
-        @events = []
-        @published = []
-      end
-
-      attr_reader :events, :published
-
-      def publish_event(event, aggregate_id)
-        events << event
-        published << event
-      end
-
-      def read_all_events(aggregate_id)
-        events
-      end
-    end
-
     def setup
       @event_store = FakeEventStore.new
       @application = Application.new(@event_store)
