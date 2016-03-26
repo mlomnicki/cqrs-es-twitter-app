@@ -10,6 +10,7 @@ Bundler.require(*Rails.groups)
 
 module ResTwitter
   class Application < Rails::Application
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
     config.api_only = true
   end
 end
