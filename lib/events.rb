@@ -6,6 +6,11 @@ module Events
     attribute :followed_person_id, Types::UUID
   end
 
+  class PersonUnfollowed < Event
+    attribute :follower_id,          Types::UUID
+    attribute :unfollowed_person_id, Types::UUID
+  end
+
   class TweetPublished < Event
     attribute :author_id, Types::UUID
     attribute :tweet_id,  Types::UUID

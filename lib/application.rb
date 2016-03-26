@@ -23,10 +23,11 @@ class Application
 
   def command_handlers
     {
-      Commands::FollowPerson => CommandHandlers::FollowPerson.new(repository),
-      Commands::PublishTweet => CommandHandlers::PublishTweet.new(repository),
-      Commands::ReplyToTweet => CommandHandlers::ReplyToTweet.new(repository),
-      Commands::DeleteTweet  => CommandHandlers::DeleteTweet.new(repository),
+      Commands::FollowPerson   => CommandHandlers::FollowPerson.new(repository),
+      Commands::UnfollowPerson => CommandHandlers::UnfollowPerson.new(repository),
+      Commands::PublishTweet   => CommandHandlers::PublishTweet.new(repository),
+      Commands::ReplyToTweet   => CommandHandlers::ReplyToTweet.new(repository),
+      Commands::DeleteTweet    => CommandHandlers::DeleteTweet.new(repository),
     }
   end
 end
