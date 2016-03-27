@@ -7,5 +7,9 @@ module ReadModel
     end
 
     attr_reader :event_store, :redis
+
+    def publish(*events)
+      events.each { |event| event_store.publish_event(event) }
+    end
   end
 end
