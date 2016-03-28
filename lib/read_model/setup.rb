@@ -8,6 +8,7 @@ module ReadModel
     end
 
     def init
+      event_store.subscribe(User.new(redis), [Events::UserSignedUp])
       event_store.subscribe(Timeline.new(redis), [Events::TweetPublished])
       event_store.subscribe(Followers.new(redis), [Events::PersonFollowed, Events::PersonUnfollowed])
     end

@@ -23,6 +23,7 @@ class Application
 
   def command_handlers
     {
+      Commands::SignUp         => CommandHandlers::SignUp.new(repository),
       Commands::FollowPerson   => CommandHandlers::FollowPerson.new(repository),
       Commands::UnfollowPerson => CommandHandlers::UnfollowPerson.new(repository),
       Commands::PublishTweet   => CommandHandlers::PublishTweet.new(repository),

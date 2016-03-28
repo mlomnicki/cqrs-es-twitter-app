@@ -26,6 +26,11 @@ module Events
     end
   end
 
+  class UserSignedUp < Event
+    attribute :user_id,   Types::UUID
+    attribute :auth_info, Domain::AuthInfo
+  end
+
   class PersonFollowed < Event
     attribute :follower_id,        Types::UUID
     attribute :followed_person_id, Types::UUID
