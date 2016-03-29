@@ -25,7 +25,6 @@ module ReadModel
         "full_name" => auth_info.full_name
       }
       assert_equal(expected, redis.hgetall("user:#{user_id}"))
-      assert_equal([auth_info.email], redis.smembers("users:emails"))
     end
   end
 end

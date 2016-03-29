@@ -7,7 +7,12 @@ gem 'redis'
 gem 'rails_event_store'
 gem 'dry-types', github: "dryrb/dry-types"
 gem 'command_bus', github: 'pawelpacana/command_bus'
+gem 'omniauth-github'
 
 group :development do
   gem 'listen'
+end
+
+group :test do
+  gem 'rack-test', require: 'rack/test'
 end

@@ -12,5 +12,9 @@ module CqrsEsTwitterApp
   class Application < Rails::Application
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
     config.api_only = true
+    config.middleware.use Rack::Session::Cookie,
+      key:    'rack.session',
+      path:   '/',
+      secret: secrets.secret_key_base
   end
 end
