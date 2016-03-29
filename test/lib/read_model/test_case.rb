@@ -2,7 +2,8 @@ module ReadModel
   module TestCase
     def setup
       @event_store = Adapters::EventStore::Client.build
-      @redis       = Redis.new
+      @redis       = Redis.new(db: 1)
+      @redis.flushdb
       Setup.new(@event_store, @redis).init
     end
 
