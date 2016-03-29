@@ -14,6 +14,7 @@ OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
     email: "user@github.com"
   }
 )
+Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:github]
 
 class FakeEventStore
   def initialize

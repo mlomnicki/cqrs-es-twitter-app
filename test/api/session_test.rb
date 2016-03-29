@@ -5,11 +5,11 @@ module Api
     include TestCase
 
     def test_sign_up
-      Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:github]
-      get '/auth/github'
-      assert last_response.redirect?
-      follow_redirect!
-      assert_equal "http://example.org/", last_response.location
+      client = HttpClient.new
+      client.get '/auth/github'
+      assert client.last_response.redirect?
+      client.follow_redirect!
+      assert_equal "http://example.org/", client.last_response.location
     end
   end
 end
