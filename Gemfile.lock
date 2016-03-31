@@ -10,6 +10,15 @@ GIT
       ruby_event_store (~> 0.5.0)
 
 GIT
+  remote: git://github.com/arkency/rails_event_store_active_record.git
+  revision: b0b5df4af5f806da4eb3bc02436ca9eff77bbba4
+  specs:
+    rails_event_store_active_record (0.5.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      ruby_event_store (~> 0.5.0)
+
+GIT
   remote: git://github.com/dryrb/dry-types.git
   revision: 9b73017d1075882aa662de057c64c9b7075c82f1
   specs:
@@ -157,10 +166,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails_event_store_active_record (0.5.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      ruby_event_store (~> 0.5.0)
     railties (5.0.0.beta3)
       actionpack (= 5.0.0.beta3)
       activesupport (= 5.0.0.beta3)
@@ -214,6 +219,7 @@ DEPENDENCIES
   rack-test
   rails (>= 5.0.0.beta3, < 5.1)
   rails_event_store!
+  rails_event_store_active_record!
   redis
 
 BUNDLED WITH
