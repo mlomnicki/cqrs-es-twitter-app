@@ -6,7 +6,7 @@ gem 'puma'
 gem 'redis'
 gem 'rails_event_store', github: "arkency/rails_event_store"
 gem 'rails_event_store_active_record', github: 'arkency/rails_event_store_active_record'
-gem 'dry-types', github: "dryrb/dry-types"
+gem 'dry-types'
 gem 'command_bus', github: 'pawelpacana/command_bus'
 gem 'omniauth-github'
 
