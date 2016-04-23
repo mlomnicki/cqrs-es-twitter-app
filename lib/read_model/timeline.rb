@@ -7,10 +7,11 @@ module ReadModel
     def handle_event(event)
       case event
       when Events::TweetPublished
-        redis.hset("tweet:#{event.event_id}", :author_id, event.author_id)
-        redis.hset("tweet:#{event.event_id}", :content,   event.content)
-        redis.hset("tweet:#{event.event_id}", :timestamp, event.timestamp.as_json)
-        redis.lpush("timeline:#{event.author_id}", event.event_id)
+        redis.hset("tweet:#{event.tweet_id}", :id,        event.tweet_id)
+        redis.hset("tweet:#{event.tweet_id}", :author_id, event.author_id)
+        redis.hset("tweet:#{event.tweet_id}", :content,   event.content)
+        redis.hset("tweet:#{event.tweet_id}", :timestamp, event.timestamp.as_json)
+        redis.lpush("timeline:#{event.author_id}", event.tweet_id)
       end
     end
 
