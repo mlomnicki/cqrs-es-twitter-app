@@ -3,8 +3,7 @@ module Adapters
     class Client
       def self.build
         RailsEventStore::Client.new(
-          repository:   RailsEventStoreActiveRecord::EventRepository.new(adapter: Event),
-          event_broker: RailsEventStore::EventBroker.new,
+          repository: RailsEventStoreActiveRecord::EventRepository.new(adapter: Event)
         )
       end
     end

@@ -1,24 +1,4 @@
 GIT
-  remote: git://github.com/arkency/rails_event_store.git
-  revision: 315a385189d347f16a2c5c132263b0fe384e2298
-  specs:
-    rails_event_store (0.5.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      aggregate_root (~> 0.2.1)
-      rails_event_store_active_record (~> 0.5.0)
-      ruby_event_store (~> 0.5.0)
-
-GIT
-  remote: git://github.com/arkency/rails_event_store_active_record.git
-  revision: b0b5df4af5f806da4eb3bc02436ca9eff77bbba4
-  specs:
-    rails_event_store_active_record (0.5.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      ruby_event_store (~> 0.5.0)
-
-GIT
   remote: git://github.com/pawelpacana/command_bus.git
   revision: 7887d7e054af54da70c03e7b80ef38c64be67c7f
   specs:
@@ -161,6 +141,16 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_event_store (0.6.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      aggregate_root (~> 0.2.1)
+      rails_event_store_active_record (~> 0.5.1)
+      ruby_event_store (~> 0.5.0)
+    rails_event_store_active_record (0.5.1)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      ruby_event_store (~> 0.5.0)
     railties (5.0.0.beta3)
       actionpack (= 5.0.0.beta3)
       activesupport (= 5.0.0.beta3)
@@ -213,8 +203,7 @@ DEPENDENCIES
   puma
   rack-test
   rails (>= 5.0.0.beta3, < 5.1)
-  rails_event_store!
-  rails_event_store_active_record!
+  rails_event_store
   redis
 
 BUNDLED WITH
