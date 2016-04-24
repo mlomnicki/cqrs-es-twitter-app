@@ -8,6 +8,7 @@ gem 'rails_event_store'
 gem 'dry-types'
 gem 'command_bus', github: 'pawelpacana/command_bus'
 gem 'omniauth-github'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'listen'

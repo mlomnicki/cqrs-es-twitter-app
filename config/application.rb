@@ -16,5 +16,11 @@ module CqrsEsTwitterApp
       key:    'rack.session',
       path:   '/',
       secret: secrets.secret_key_base
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: :any
+      end
+    end
   end
 end
